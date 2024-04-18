@@ -1,67 +1,47 @@
+<!-- layout.svelte -->
 <script>
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import { webVitals } from '$lib/vitals';
-	import Header from './Header.svelte';
-	import './styles.css';
+  import { onMount } from "svelte";
+  import { auth } from "$lib/firebase";
+  import { browser } from "$app/environment";
+  import { authHandlers, authStore } from "$lib/stores/authStore";
+  import { goto } from "$app/navigation";
+  import Footer from "$lib/components/Footer.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import Notification from '$lib/components/Notification.svelte';
 
-	/** @type {import('./$types').LayoutServerData} */
-	export let data;
+  onMount(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      // Update the authentication state in the store
+      // @ts-ignore
+      authStore.update((curr) => {
+        return { ...curr, isLoading: false, currentUser: user };
+      });
 
-	$: if (browser && data?.analyticsId) {
-		webVitals({
-			path: $page.url.pathname,
-			params: $page.params,
-			analyticsId: data.analyticsId
-		});
-	}
+      if (!user && browser && window.location.pathname !== "/login") {
+        // If user is not logged in and the current page is not the login page, redirect to login
+        goto("/login");
+      }
+    });
+    return unsubscribe;
+  });
 </script>
 
-<div class="app">
-	<Header />
+<svelte:head>
+  <title>Momentum</title>
+</svelte:head>
 
-	<main>
-		<slot />
-	</main>
+<Header />
+<main class="mainContainer">
+  <slot />
+  <Notification />
+</main>
+<Footer />
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<style lang="scss">
+  .mainContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
 </style>
