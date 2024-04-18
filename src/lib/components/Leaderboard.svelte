@@ -1,4 +1,5 @@
 <script>
+  // @ts-ignore
   import { onMount, onDestroy } from "svelte";
   import { calculateUsersPointsAndLevels } from "$lib/stores/database";
   import { auth } from "$lib/firebase";

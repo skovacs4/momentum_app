@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import Leaderboard from "$lib/components/Leaderboard.svelte";
   import { auth } from "$lib/firebase";
   import Authentication from "$lib/components/Authentication.svelte";

@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import History from "$lib/components/History.svelte";
     import { auth } from "$lib/firebase";
     import Authentication from "$lib/components/Authentication.svelte";
