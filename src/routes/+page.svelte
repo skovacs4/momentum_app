@@ -6,6 +6,7 @@
   import Tasks from "$lib/components/Tasks.svelte";
   import Points from "$lib/components/Points.svelte";
   import Character from "$lib/components/Character.svelte";
+  // @ts-ignore
   import { RiSystemAddLargeFill } from "svelte-icons-pack/ri";
   import { Icon } from "svelte-icons-pack";
 
