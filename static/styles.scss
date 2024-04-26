@@ -449,6 +449,10 @@ select:hover {
 
         svg {
           font-size: 26px;
+
+          path, polyline {
+            stroke: var(--text) !important;
+          }
         }
       }
 
