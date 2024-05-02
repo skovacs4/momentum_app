@@ -82,8 +82,6 @@
 
 <style lang="scss">
   @media screen and (max-width: 768px) {
-	.dashboard {
-
 		.tasks-container {
 			padding: 7.5px;
 			margin-top: 15px;
@@ -203,21 +201,8 @@
 			font-weight: 600;
 		}
 	}
-}
 
 @media screen and (min-width: 768px) {
-	/* Global stylesheet or component style section */
-	.auth-page {
-		height: 100vh;
-		overflow: hidden;
-	}
-
-	h1 {
-		font-size: 42px;
-	}
-
-	.dashboard {
-
 		.complete-icon {
 			// complete icon
 			path {
@@ -352,5 +337,4 @@
 			/* Adjust HSL values for desired darkening */
 		}
 	}
-}
 </style>
