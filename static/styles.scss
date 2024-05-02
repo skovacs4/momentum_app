@@ -1,20 +1,16 @@
 /* Global Reset and Container Styles */
-body {
+:global(body) {
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
 
 	color: #333;
-}
 
-@media screen and (max-width: 768px) {
-	body {
+	@media screen and (max-width: 768px) {
 		background: linear-gradient(to bottom, #363636, var(--primary-color), #333);
 	}
-}
 
-@media screen and (min-width: 768px) {
-	body {
+	@media screen and (min-width: 768px) {
 		background: linear-gradient(to bottom, #363636, var(--primary-color));
 	}
 }
