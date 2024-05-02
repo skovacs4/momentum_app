@@ -68,11 +68,7 @@
         >
         <!-- svelte-ignore missing-declaration -->
         <button on:click={() => openCompleteModal(task)} class="complete"
-          ><Icon
-            src={IoCheckmarkCircleOutline}
-            color="#fff" 
-            size="26px"
-            className="complete-icon"
+          ><Icon src={IoCheckmarkCircleOutline} color="#fff" stroke="#fff" size="26px" className="complete-icon"
           /></button
         >
       </div>
