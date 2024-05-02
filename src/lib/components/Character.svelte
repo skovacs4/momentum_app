@@ -46,12 +46,21 @@
     <img src={startCharacter} alt="Character">
   </div>
   
-  <style>
+  <style lang="scss">
     /* Styling for the character image */
     img {
       width: 200px; /* Set a fixed width for the character image */
       height: auto; /* Maintain aspect ratio */
       margin-top: 20px; /* Add top margin for spacing */
+    }
+
+    @media screen and (min-width: 768px) {
+      .character {
+				img {
+					width: 375px;
+					border: var(--magic-purple) solid 2px;
+				}
+			}
     }
   </style>
   

@@ -97,4 +97,19 @@
     color: var(--text);
     font-weight: bold;
   }
+
+  @media screen and (min-width: 768px) {
+  .points-container {
+				width: 40%;
+
+				.stats {
+					margin-bottom: 30px;
+				}
+
+				p {
+					margin-bottom: 25px;
+					font-size: 21px;
+				}
+			}
+    }
 </style>
