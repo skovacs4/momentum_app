@@ -214,6 +214,12 @@
 			}
 		}
 
+    .task {
+      svg {
+        font-size: 26px;
+      }
+    }
+
 		.edit-icon {
 			path {
 				// fill: white;
