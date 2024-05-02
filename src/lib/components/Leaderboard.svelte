@@ -21,10 +21,6 @@
     }
   });
 
-  // Optional: Clean up resources on component destroy
-  onDestroy(() => {
-    // Clean up any resources if needed
-  });
 </script>
 
 <div class="leaderboard">

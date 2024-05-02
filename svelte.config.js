@@ -11,7 +11,7 @@ const config = {
 			prependData: `@import 'static/styles.scss';`, // Import global SCSS variables
 		},
 	}),
-	preprocess: preprocess(),
+	// preprocess: preprocess(),
 };
 
 export default config;
