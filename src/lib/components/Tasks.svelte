@@ -214,12 +214,6 @@
 			}
 		}
 
-    .task {
-      svg {
-        font-size: 26px;
-      }
-    }
-
 		.edit-icon {
 			path {
 				// fill: white;
@@ -280,6 +274,8 @@
 
 				svg {
 					font-size: 26px;
+          width: 25px;
+          height: 25px;
 
 					path,
 					polyline {
