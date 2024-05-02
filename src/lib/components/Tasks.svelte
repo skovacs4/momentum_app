@@ -64,12 +64,14 @@
       </div>
       <div class="task-buttons">
         <button on:click={() => openEditModal(task)} class="edit"
-          ><Icon src={CiEdit} className="edit-icon" /></button
+          ><Icon src={CiEdit} color="#fff" size="26px" className="edit-icon" /></button
         >
         <!-- svelte-ignore missing-declaration -->
         <button on:click={() => openCompleteModal(task)} class="complete"
           ><Icon
             src={IoCheckmarkCircleOutline}
+            color="#fff" 
+            size="26px"
             className="complete-icon"
           /></button
         >
@@ -274,8 +276,6 @@
 
 				svg {
 					font-size: 26px;
-          width: 25px;
-          height: 25px;
 
 					path,
 					polyline {
