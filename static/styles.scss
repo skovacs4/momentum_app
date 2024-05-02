@@ -1,5 +1,5 @@
 /* Global Reset and Container Styles */
-:global(body) {
+body {
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -298,7 +298,25 @@ select:hover {
 	}
 }
 
+@media screen and (max-width: 475px) {
+	.dashboard {
+		h1 {
+			font-size: 16px;
+		}
 
+		.character-container {
+			.points-container {
+				font-size: 12px;
+			}
+
+			.character {
+				img {
+					width: 150px;
+				}
+			}
+		}
+	}
+}
 
 @media screen and (min-width: 768px) {
 	/* Global stylesheet or component style section */

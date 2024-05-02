@@ -6,11 +6,12 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	preprocess: preprocess({
-		scss: {
-			prependData: `@import 'static/styles.scss';`, // Import global SCSS variables
-		},
-	}),
+	// preprocess: preprocess({
+	// 	scss: {
+	// 		prependData: `@import 'static/styles.scss';`, // Import global SCSS variables
+	// 	},
+	// }),
+		preprocess: preprocess(),
 };
 
 export default config;
