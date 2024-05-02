@@ -1,14 +1,17 @@
 module.exports = {
-	root: true,
-	extends: ['eslint:recommended', 'plugin:svelte/recommended', 'prettier'],
-	parserOptions: {
-		sourceType: 'module',
-		ecmaVersion: 2020,
-		extraFileExtensions: ['.svelte']
-	},
 	env: {
-		browser: true,
-		es2017: true,
-		node: true
-	}
-};
+	  node: true,
+	  es2021: true,
+	},
+	extends: [
+	  'eslint:recommended',
+	],
+	parserOptions: {
+	  ecmaVersion: 12,
+	},
+	rules: {
+	  // Disable 'no-unused-vars' rule for specific variables
+	  'no-unused-vars': ['error', { varsIgnorePattern: 'onRequest|logger' }],
+	},
+  };
+  
