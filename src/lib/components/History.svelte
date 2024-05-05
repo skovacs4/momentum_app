@@ -13,6 +13,11 @@
   import { Icon } from "svelte-icons-pack";
   import { convertTimestamp } from "$lib/utils/dateFormatter";
 
+      const historyBanner = [
+      "assets/history-banner.png"
+    ];
+
+
   let completedTasksCount = 0;
   /**
    * @type {{ title: any; description: any; completed: any; createdAt: string | number | Date; } | null}
@@ -56,7 +61,7 @@
   }
 </script>
 
-<img src="assets/history-banner.png" alt="History Banner" class="history-banner" />
+<img src={historyBanner} alt="History Banner" class="history-banner" />
 <div class="tasks-container">
   <h1>History</h1>
   <table class="tasks-table">

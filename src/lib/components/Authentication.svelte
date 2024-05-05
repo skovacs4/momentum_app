@@ -10,6 +10,8 @@
 	let username = ''; // Variable for the username
 	let errorMessage = ''; // Variable to hold error message
 
+	const assets = ['assets/wonder-1.png'];
+
 	onMount(() => {
 		// Add custom class to <body> when component mounts
 		document.body.classList.add('auth-page');
@@ -119,9 +121,8 @@
 		{/if}
 	</div>
 	<div class="image-container">
-		<!-- Replace 'image-url.jpg' with your actual image URL -->
 		<!-- svelte-ignore a11y-img-redundant-alt -->
-		<img src="assets/wonder-1.png" alt="Authentication Image" />
+		<img src={assets[0]} alt="Authentication Image" />
 	</div>
 </div>
 
