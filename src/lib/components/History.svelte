@@ -61,7 +61,7 @@
   }
 </script>
 
-<img src={historyBanner} alt="History Banner" class="history-banner" />
+<img src={historyBanner[0]} alt="History Banner" class="history-banner" />
 <div class="tasks-container">
   <h1>History</h1>
   <table class="tasks-table">

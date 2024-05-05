@@ -28,6 +28,7 @@
 
 <svelte:head>
   <title>Momentum</title>
+  <link rel="stylesheet" href="./styles.scss">
 </svelte:head>
 
 <Header />
