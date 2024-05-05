@@ -12,6 +12,7 @@
   import { FaClock } from "svelte-icons-pack/fa";
   import { Icon } from "svelte-icons-pack";
   import { convertTimestamp } from "$lib/utils/dateFormatter";
+  import banner from "$lib/assets/history-banner.png";
 
       const historyBanner = [
       "assets/history-banner.png"
@@ -61,7 +62,7 @@
   }
 </script>
 
-<img src={historyBanner[0]} alt="History Banner" class="history-banner" />
+<img src={banner} alt="History Banner" class="history-banner" />
 <div class="tasks-container">
   <h1>History</h1>
   <table class="tasks-table">
