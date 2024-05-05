@@ -4,8 +4,8 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { calculateUsersPointsAndLevels } from '$lib/stores/database';
 	import { auth } from '$lib/firebase';
-
-	const assets = ['assets/king-1.png', 'assets/leaderboard-cover.png' ];
+	import king from '$lib/assets/king-1.png';
+	import banner from '$lib/assets/leaderboard-cover.png';
 
 	/**
 	 * @type {string | any[]}
@@ -26,8 +26,8 @@
 </script>
 
 <div class="leaderboard">
-	<img src={assets[1]} alt="Banner" class="banner" />
-	<img src={assets[0]} alt="Logo" class="king_img" />
+	<img src={banner} alt="Banner" class="banner" />
+	<img src={king} alt="Logo" class="king_img" />
 	<h1>Leaderboard</h1>
 
 	{#if usersData.length > 0}

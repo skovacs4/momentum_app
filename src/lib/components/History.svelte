@@ -14,10 +14,6 @@
   import { convertTimestamp } from "$lib/utils/dateFormatter";
   import banner from "$lib/assets/history-banner.png";
 
-      const historyBanner = [
-      "assets/history-banner.png"
-    ];
-
 
   let completedTasksCount = 0;
   /**

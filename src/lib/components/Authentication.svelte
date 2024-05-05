@@ -1,7 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import { authHandlers, authStore } from '../stores/authStore';
-	import { doc, setDoc } from 'firebase/firestore'; // Import for Firestore
+	import { doc, setDoc } from 'firebase/firestore';
+	import wonder from '$lib/assets/wonder-1.png';
 
 	let register = false;
 	let email = '';
@@ -9,8 +10,6 @@
 	let confirmPassword = '';
 	let username = ''; // Variable for the username
 	let errorMessage = ''; // Variable to hold error message
-
-	const assets = ['assets/wonder-1.png'];
 
 	onMount(() => {
 		// Add custom class to <body> when component mounts
@@ -122,7 +121,7 @@
 	</div>
 	<div class="image-container">
 		<!-- svelte-ignore a11y-img-redundant-alt -->
-		<img src={assets[0]} alt="Authentication Image" />
+		<img src={wonder} alt="Authentication Image" />
 	</div>
 </div>
 
