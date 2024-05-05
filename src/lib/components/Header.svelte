@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import { authHandlers, authStore } from "$lib/stores/authStore";
   import { BiHomeAlt2 } from "svelte-icons-pack/bi";
   import { AiOutlineHistory } from "svelte-icons-pack/ai";

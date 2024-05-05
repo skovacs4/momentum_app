@@ -36,7 +36,7 @@
 			return;
 		}
 
-		if (register && password === confirmPassword) {
+		if (register && password === confirmPassword && username) {
 			try {
 				const userCredential = await authHandlers.signup(email, password, username);
 				// @ts-ignore
@@ -58,7 +58,11 @@
 				console.log(err);
 
 				// @ts-ignore
-				if (err) {
+				if (err && !username)
+				{
+					errorMessage = "Fields cannot be empty.";
+				}
+				else {
 					errorMessage = 'Wrong email address or password.';
 				}
 			}
@@ -84,10 +88,10 @@
 			</label>
 			{#if register}
 				<label>
-					<input bind:value={username} type="text" placeholder="Username" />
+					<input bind:value={confirmPassword} type="password" placeholder="Confirm Password" />
 				</label>
 				<label>
-					<input bind:value={confirmPassword} type="password" placeholder="Confirm Password" />
+					<input bind:value={username} type="text" placeholder="Username" />
 				</label>
 			{/if}
 			{#if errorMessage}
