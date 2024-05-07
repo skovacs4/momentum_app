@@ -108,7 +108,7 @@
 		.dashboard {
 			& .character-container {
 				.points-container {
-					font-size: 12px;
+					font-size: 12px !important;
 				}
 			}
 		}
