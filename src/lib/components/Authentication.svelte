@@ -97,7 +97,7 @@
 			{#if errorMessage}
 				<p class="error-message">{errorMessage}</p>
 			{/if}
-			<button on:click={handleSubmit}>{register ? 'Submit' : 'Sign In'}</button>
+			<button on:click={handleSubmit} class="sign-in">{register ? 'Submit' : 'Sign In'}</button>
 		</form>
 		{#if !register}
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -136,6 +136,23 @@
 			height: 100vh;
 			overflow: hidden;
 		}
+	}
+
+	@media screen and (max-width: 475px) {
+
+			.form-container {
+				input {
+					width: 100% !important;
+				}
+
+				.sign-in {
+					width: 100% !important;
+				}
+			}
+
+			.image-container {
+				display: none;
+			}
 	}
 
 	@media screen and (max-width: 1110px) {
